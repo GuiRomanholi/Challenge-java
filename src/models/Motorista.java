@@ -18,6 +18,9 @@ public class Motorista {
         valorAcrescimo = leitor.nextDouble();
         return this.salario += valorAcrescimo;
     }
+
+
+    //Getters e Setters
     public String getId() {
         return id;
     }
