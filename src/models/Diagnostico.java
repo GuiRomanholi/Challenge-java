@@ -1,15 +1,15 @@
 package models;
 
-public class Diagnostico extends Problema{
+public class Diagnostico{
     private String descricaoSintoma;
     private String observacoesMotorista;
     private String condicoesOcorrencia;
     private String tempoOCorrencia;
 
 
-    @Override
+
     public String exibirDiagnostico() {
-        return super.exibirDiagnostico();
+        return "";
     }
 
     //Getters e Setters

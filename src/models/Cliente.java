@@ -9,7 +9,7 @@ public class Cliente {
     private String email;
 
 
-    public String cadastrar(){
+    public void cadastrar(){
         Scanner leitor = new Scanner(System.in);
         System.out.println("Qual o seu nome? ");
         this.nome = leitor.nextLine();
@@ -19,7 +19,7 @@ public class Cliente {
         this.telefone = leitor.nextLine();
         System.out.println("Qual o seu email? ");
         this.email = leitor.nextLine();
-        return "Obrigado pelo cadastro!";
+        System.out.println("Obrigado pelo cadastro!");
     }
 
     public String exibirCliente(){

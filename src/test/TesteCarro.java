@@ -41,7 +41,24 @@ public class TesteCarro {
 
                     break;
                 case 4:
-
+                    int resposta;
+                    boolean volta;
+                    volta = true;
+                    motorista1.cadastrar();
+                    System.out.println(motorista1.exibirMotorista());
+                    while (volta == true){
+                        System.out.println("Deseja aumentar o sálario do Motorista? (1 = Sim) e (2 = Não)");
+                        resposta = leitorNum.nextInt();
+                        if (resposta == 1){
+                            motorista1.aumentoSalario();
+                            break;
+                        } else if (resposta == 2) {
+                            System.out.println("Retornando ao Sistema Principal...");
+                            break;
+                        }else {
+                            System.out.println("Por favor digite 1 para Sim ou 2 para Não");
+                        }
+                    }
                     break;
                 case 5:
 
