@@ -9,7 +9,9 @@ public class Guincho extends Veiculo{
 
     @Override
     public String exibirDetalhes() {
-        return super.exibirDetalhes();
+        return "O Guincho de placa " + this.placa
+                + " e de marca " + this.marca + " e foi fabricado " + this.ano_fabricacao
+                + " está a caminho!";
     }
 
     public String acionarGuincho(){
