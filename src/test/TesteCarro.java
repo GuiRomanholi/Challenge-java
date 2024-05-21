@@ -26,6 +26,7 @@ public class TesteCarro {
                     "\n3 - Pegar Diagnostico" +
                     "\n4 - Forma de Pagamento" +
                     "\n5 - Cadastrar Motorista" +
+                    "\n6 - Avaliação" +
                     "\n0 - Sair" +
                     "\n--> ");
             opcao = leitorNum.nextInt();
@@ -63,9 +64,10 @@ public class TesteCarro {
                 case 5:
 
                     break;
+                case 6:
+
+                    break;
             }
-        }while (opcao != 0);{
-            System.out.printf("Até Breve!");
-        }
+        }while (opcao != 0);{System.out.println("Até Breve!");}
     }
 }
