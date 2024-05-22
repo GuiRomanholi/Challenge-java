@@ -11,7 +11,7 @@ public abstract class Veiculo {
     public String exibirDetalhes(){
         return "Bom dia Úsuario, seu veiculo de placa " + this.placa
                 + "de marca " + this.marca + "\ne de modelo " + this.modelo
-                + "já está cadastrado no nosso sistema";
+                + " já está cadastrado no nosso sistema";
     }
 
 

@@ -8,7 +8,9 @@ public class Endereco {
 
 
     public String exibirEndereco(){
-        return "";
+        return "O guincho vai ir a oficina que está localizada no estado de " + this.estado +
+                "\nNa cidade de " + this.cidade + " do cep " + this.cep +
+                "\nCom número " + this.numero;
     }
 
 

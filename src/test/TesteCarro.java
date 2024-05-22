@@ -2,72 +2,80 @@ package test;
 
 import models.*;
 
+import java.time.LocalDate;
 import java.util.Scanner;
 
 public class TesteCarro {
     public static void main(String[] args) {
-        Scanner leitor = new Scanner(System.in);
-        Scanner leitorNum = new Scanner(System.in);
-        Carro carro1 = new Carro();
-        Problema problema1 = new Problema();
-        Motorista motorista1 = new Motorista();
-        Cliente cliente1 = new Cliente();
-        Diagnostico diagnostico1 = new Diagnostico();
+        System.out.println("-------------------------------------------------------");
+        Cliente cliente = new Cliente();
+        cliente.setNome("Vitor");
+        cliente.setCpf("355.233.654-12");
+        cliente.setEmail("vitinho@email.com");
+        cliente.setTelefone("(11) 23234-2399");
 
 
+        System.out.println(cliente.exibirCliente("Vitor","355.233.654-12"));
 
-        int opcao;
-        do {
-            System.out.println("---------------------------------------------------------");
-            System.out.println("\tS I S T E M A - D O - C O N C E R T - C A R ' S" +
-                    "\n---------------------------------------------------------" +
-                    "\nEscolha a opção:" +
-                    "\n1 - Cadastrar Cliente" +
-                    "\n2 - Informar Problema e Pedir Guincho" +
-                    "\n3 - Pegar Diagnostico" +
-                    "\n4 - Forma de Pagamento" +
-                    "\n5 - Cadastrar Motorista" +
-                    "\n6 - Avaliação" +
-                    "\n0 - Sair" +
-                    "\n--> ");
-            opcao = leitorNum.nextInt();
-            switch (opcao) {
-                case 1:
-                    cliente1.cadastrar();
-                    System.out.println(cliente1.exibirCliente());
-                    break;
-                case 2:
-                    problema1.informarProblema();
-                    break;
-                case 3:
-                    diagnostico1.exibirDiagnostico();
-                    break;
-                case 4:
+        System.out.println("-------------------------------------------------------");
 
-                    break;
-                case 5:
-                    int resposta;
-                    boolean volta = true;
-                    motorista1.cadastrar();
-                    System.out.println(motorista1.exibirMotorista());
-                    while (volta == true){
-                        System.out.println("Deseja aumentar o sálario do Motorista? (1 = Sim) e (2 = Não)");
-                        resposta = leitorNum.nextInt();
-                        if (resposta == 1){
-                            motorista1.aumentoSalario();
-                            break;
-                        } else if (resposta == 2) {
-                            System.out.println("Retornando ao Sistema Principal...");
-                            break;
-                        }else {
-                            System.out.println("Por favor digite 1 para Sim ou 2 para Não");
-                        }
-                    }
-                    break;
-                case 6:
+        Carro carro = new Carro();
+        carro.setPlaca("1FD3R4");
+        carro.setCor("Prata");
+        carro.setMarca("Fiat");
+        carro.setModelo("CRONOS");
 
-                    break;
-            }
-        }while (opcao != 0);{System.out.println("Até Breve!");}
+
+        System.out.println(carro.exibirDetalhes());
+
+        System.out.println("-------------------------------------------------------");
+
+        Guincho guincho = new Guincho();
+        guincho.setMarca("Ford");
+        guincho.setPlaca("3FGU76");
+        guincho.setAno_fabricacao("2006");
+
+        System.out.println(guincho.exibirDetalhes());
+        guincho.acionarGuincho();
+
+        System.out.println("-------------------------------------------------------");
+
+        Diagnostico diagnostico = new Diagnostico();
+        diagnostico.exibirDiagnostico();
+        diagnostico.mostrarDescricao();
+
+
+        System.out.println("-------------------------------------------------------");
+
+        Endereco endereco = new Endereco();
+        endereco.setCep("08480040");
+        endereco.setCidade("São Paulo");
+        endereco.setEstado("São Paulo");
+        endereco.setNumero("223");
+
+        System.out.println(endereco.exibirEndereco());
+
+        System.out.println("-------------------------------------------------------");
+
+        System.out.println("DADOS DO PEDIDO");
+        Pedido pedido = new Pedido();
+        pedido.setData(LocalDate.ofEpochDay(12/10/2024));
+        pedido.setHora("10:10");
+        pedido.setNumero("13642");
+
+        System.out.println(pedido.dadosPedido());
+
+        System.out.println("-------------------------------------------------------");
+
+        FrmPagamento frmPagamento = new FrmPagamento();
+        frmPagamento.setId("4235113");
+        frmPagamento.setStatus("Aprovado");
+        frmPagamento.escolherForma();
+        frmPagamento.exibirValor(200);
+        
+
+        System.out.println("-------------------------------------------------------");
+
+
     }
 }

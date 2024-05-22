@@ -8,7 +8,9 @@ public class Carro extends Veiculo{
 
     @Override
     public String exibirDetalhes() {
-        return super.exibirDetalhes() + "\nA cor do seu carro é " + cor;
+        return super.exibirDetalhes() + "\nA cor do seu carro é " + cor +
+                " seu carro está cadastrado.";
+
     }
 
 

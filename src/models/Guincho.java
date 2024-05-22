@@ -1,5 +1,7 @@
 package models;
 
+import java.util.Scanner;
+
 public class Guincho extends Veiculo{
     private String chassi;
     private String ano_fabricacao;
@@ -10,12 +12,26 @@ public class Guincho extends Veiculo{
     @Override
     public String exibirDetalhes() {
         return "O Guincho de placa " + this.placa
-                + " e de marca " + this.marca + " e foi fabricado " + this.ano_fabricacao
-                + " está a caminho!";
+                + " e de marca " + this.marca + " que foi fabricado " + this.ano_fabricacao;
     }
 
-    public String acionarGuincho(){
-       return "Seu Guincho está a caminho";
+    public void acionarGuincho(){
+        Scanner leitorNum = new Scanner(System.in);
+        boolean volta = true;
+        int prosseguir;
+        while (volta == true){
+            System.out.println("Fique Tranquilo, você gostaria de chamar um guincho? (1 = Sim) e (2 = Não)");
+            prosseguir = leitorNum.nextInt();
+            if (prosseguir == 1){
+                System.out.println("O Guincho está a caminho.");
+                break;
+            } else if (prosseguir == 2) {
+                System.out.println("--> Retornando...");
+                break;
+            }else {
+                System.out.println("Por favor digite 1 para Sim ou 2 para Não");
+            }
+        }
     }
 
 

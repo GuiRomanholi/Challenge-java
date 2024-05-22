@@ -4,9 +4,6 @@ import java.util.Scanner;
 
 public class Diagnostico{
     private String descricaoSintoma;
-    private String observacoesMotorista;
-    private String condicoesOcorrencia;
-    private String tempoOCorrencia;
 
 
     public void exibirMenuProblema(){
@@ -27,6 +24,14 @@ public class Diagnostico{
         );
     }
 
+    public void mostrarDescricao(){
+        this.descricaoSintoma = descricaoSintoma;
+        Scanner leitor = new Scanner(System.in);
+        System.out.printf("Por favor me de uma descrição do que ocorreu com seu veículo: ");
+        setDescricaoSintoma(leitor.nextLine());
+        System.out.println("Muito bem, resolveremos os seus problemas");
+    }
+
 
 
 
@@ -34,39 +39,39 @@ public class Diagnostico{
         Scanner leitorNum = new Scanner(System.in);
         int opcao;
         boolean prossegui = true;
-        System.out.println("O problema do seu veiculo foi relatado, " +
-                        "E caso você ache que seu problema está relacionado a algum destes infortúnios" +
-                        " por favor digite o repectivo número");
+        System.out.println("Caso você queira resolver o problema, " +
+                        "\nE caso você ache que seu problema está relacionado a algum destes infortúnios" +
+                        "\n por favor digite o repectivo número: ");
         while (prossegui == true){
             exibirMenuProblema();
             opcao = leitorNum.nextInt();
             if (opcao == 1){
                 System.out.println("Se o carro estiver superaquecendo, pare imediatamente, desligue o motor e deixe esfriar." +
-                                "Verifique o nível do líquido de arrefecimento e procure por vazamentos.");
+                                "\nVerifique o nível do líquido de arrefecimento e procure por vazamentos.");
             } else if (opcao == 2) {
                 System.out.println("Em caso de pane elétrica no carro, verifique os fusíveis e conexões elétricas." +
-                                "Se necessário, chame um eletricista automotivo qualificado para diagnosticar e corrigir o problema.");
+                                "\nSe necessário, chame um eletricista automotivo qualificado para diagnosticar e corrigir o problema.");
             } else if (opcao == 3) {
                 System.out.println("Se a bateria do carro estiver ruim, tente dar uma carga com cabos auxiliares ou um carregador portátil." +
-                                "Se não resolver, substitua por uma nova ou chame um serviço de assistência para fazer isso.");
+                                "\nSe não resolver, substitua por uma nova ou chame um serviço de assistência para fazer isso.");
             } else if (opcao == 4) {
                 System.out.println("Se estiver sem combustível, pare o carro em local seguro." +
-                                "Se possível, peça ajuda para trazer combustível. " +
-                                "Se não, chame um serviço de assistência para reabastecer ou providenciar uma solução.");
+                                "\nSe possível, peça ajuda para trazer combustível. " +
+                                "\nSe não, chame um serviço de assistência para reabastecer ou providenciar uma solução.");
             } else if (opcao == 5) {
                 System.out.println("Se o carro estiver trepidando, verifique as rodas quanto a danos ou desequilíbrio." +
-                                "Se necessário, ajuste a pressão dos pneus." +
-                                "Se o problema persistir, pode ser necessário verificar os freios ou a suspensão com um mecânico.");
+                                "\nSe necessário, ajuste a pressão dos pneus." +
+                                "\nSe o problema persistir, pode ser necessário verificar os freios ou a suspensão com um mecânico.");
             } else if (opcao == 6) {
                 System.out.println("Se tiver um pneu furado, estacione em local seguro." +
-                                "Troque o pneu utilizando o macaco e a chave de roda, ou chame um serviço de assistência para trocar o pneu por você.");
+                                "\nTroque o pneu utilizando o macaco e a chave de roda, ou chame um serviço de assistência para trocar o pneu por você.");
             } else if (opcao == 7) {
                 System.out.println("Se a correia dentada quebrar, pare o carro imediatamente para evitar danos ao motor." +
-                                "Chame um serviço de reboque para levar o veículo a uma oficina mecânica para substituir a correia e verificar se há danos adicionais no motor.");
+                                "\nChame um serviço de reboque para levar o veículo a uma oficina mecânica para substituir a correia e verificar se há danos adicionais no motor.");
             } else if (opcao == 8) {
                 System.out.println("Se enfrentar problemas de câmbio, estacione com segurança." +
-                                "Verifique o nível de fluido de transmissão e procure sinais de vazamento." +
-                                "Se persistir, consulte um mecânico qualificado para diagnosticar e reparar o câmbio.");
+                                "\nVerifique o nível de fluido de transmissão e procure sinais de vazamento." +
+                                "\nSe persistir, consulte um mecânico qualificado para diagnosticar e reparar o câmbio.");
             } else if (opcao == 0) {
                 System.out.println("Voltando");
                 break;
@@ -77,39 +82,15 @@ public class Diagnostico{
     }
 
 
-
-
-
             //Getters e Setters
-            public String getDescricaoSintoma() {
-                return descricaoSintoma;
-            }
 
-            public void setDescricaoSintoma(String descricaoSintoma) {
-                this.descricaoSintoma = descricaoSintoma;
-            }
+    public String getDescricaoSintoma() {
+        return descricaoSintoma;
+    }
 
-            public String getObservacoesMotorista() {
-                return observacoesMotorista;
-            }
+    public void setDescricaoSintoma(String descricaoSintoma) {
+        this.descricaoSintoma = descricaoSintoma;
+    }
 
-            public void setObservacoesMotorista(String observacoesMotorista) {
-                this.observacoesMotorista = observacoesMotorista;
-            }
 
-            public String getCondicoesOcorrencia() {
-                return condicoesOcorrencia;
-            }
-
-            public void setCondicoesOcorrencia(String condicoesOcorrencia) {
-                this.condicoesOcorrencia = condicoesOcorrencia;
-            }
-
-            public String getTempoOCorrencia() {
-                return tempoOCorrencia;
-            }
-
-            public void setTempoOCorrencia(String tempoOCorrencia) {
-                this.tempoOCorrencia = tempoOCorrencia;
-            }
-        }
+}

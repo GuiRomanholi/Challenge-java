@@ -9,24 +9,13 @@ public class Cliente {
     private String email;
 
 
-    public void cadastrar(){
-        Scanner leitor = new Scanner(System.in);
-        System.out.println("Qual o seu nome? ");
-        this.nome = leitor.nextLine();
-        System.out.println("Qual o seu cpf? ");
-        this.cpf = leitor.nextLine();
-        System.out.println("Qual o seu telefone? ");
-        this.telefone = leitor.nextLine();
-        System.out.println("Qual o seu email? ");
-        this.email = leitor.nextLine();
-        System.out.println("Obrigado pelo cadastro!");
-    }
-
-    public String exibirCliente(){
-        return "Bom dia " + this.nome +
-                "\nSeu cpf foi cadastrado como: " + this.cpf +
-                "\nSeu telefone é: " + this.telefone +
-                "\nE seu email é: " + this.email;
+    public String exibirCliente(String nome, String cpf){
+        this.nome = nome;
+        this.cpf = cpf;
+        return "Bom dia " + getNome() +
+                "\nSeu cpf foi cadastrado como: " + getCpf() +
+                "\nSeu telefone é: " + getTelefone() +
+                "\nE seu email é: " + getEmail();
     }
 
     //Getters e Setters
