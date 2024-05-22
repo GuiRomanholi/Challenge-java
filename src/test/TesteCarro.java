@@ -154,7 +154,44 @@ public class TesteCarro {
 
         System.out.println("-------------------------------------------------------\n");
 
-        
-    }
+        while (prosseguir == true){
+            System.out.println("Deseja ver a situação do veiculo? (Sim = 1) e (Não = 2)");
+            continuar = leitorNum.nextInt();
+            if (continuar == 1){
+                Problema problema = new Problema();
+                problema.setGravidade("Alta");
+                problema.setHistoricoVeiculo("Veiculo Zero");
+                problema.exibirSituacaoProblema();
+                break;
+            } else if (continuar == 2) {
+                System.out.println("Prosseguindo...");
+                break;
+            }else {
+                System.out.println("Por favor informe 1 para Sim e 2 para Não");
+            }
+        }
 
+
+        System.out.println("-------------------------------------------------------\n");
+
+        while (prosseguir == true){
+            System.out.println("Deseja ver a oficina que seu veículo foi direcionado? (Sim = 1) e (Não = 2)");
+            continuar = leitorNum.nextInt();
+            if (continuar == 1){
+                Oficina oficina = new Oficina();
+                oficina.setNome("AutoPrime");
+                oficina.setCnpj("12.345.678/0001-90");
+                oficina.setContato("(11) 93774-3726");
+                oficina.setRazao_social("Oficina Mecânica AutoPrime Ltda");
+
+                System.out.println(oficina.oficinaRecebeuCarro());
+                break;
+            } else if (continuar == 2) {
+                System.out.println("Prosseguindo...");
+                break;
+            }else {
+                System.out.println("Por favor informe 1 para Sim e 2 para Não");
+            }
+        }
+    }
 }

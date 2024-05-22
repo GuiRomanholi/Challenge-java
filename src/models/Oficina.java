@@ -7,12 +7,9 @@ public class Oficina {
     private String contato;
 
 
-    public String realizarServico(){
-        return "";
-    }
-
-    public String exibirDadosOficina(){
-        return "";
+    public String oficinaRecebeuCarro(){
+        return "A oficina " + this.nome + "recebeu o veículo" +
+                "\ne para caso precise aqui está o contato: " + this.contato;
     }
 
 
