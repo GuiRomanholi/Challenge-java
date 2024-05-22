@@ -21,7 +21,7 @@ public class Problema {
             System.out.println("Fique Tranquilo, você gostaria de chamar um guincho? (1 = Sim) e (2 = Não)");
             prosseguir = leitorNum.nextInt();
             if (prosseguir == 1){
-                System.out.println("Aqui estão os detalhes do guincho" +
+                System.out.println( "Aqui estão os detalhes do guincho" +
                         "\n-------------------------------------");
                 System.out.println("BOTA O GUINCHO NO MAIN");
                 break;

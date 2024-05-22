@@ -72,7 +72,6 @@ public class TesteCarro {
         frmPagamento.setStatus("Aprovado");
         frmPagamento.escolherForma();
         frmPagamento.exibirValor(200);
-        
 
         System.out.println("-------------------------------------------------------");
 
