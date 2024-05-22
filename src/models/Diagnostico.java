@@ -31,12 +31,11 @@ public class Diagnostico{
 
 
     public void exibirDiagnostico() {
-        Problema problema2 = new Problema();
         Scanner leitorNum = new Scanner(System.in);
         int opcao;
         boolean prossegui = true;
-        System.out.println("O problema relatado no seu veiculo foi " + problema2.getHistoricoVeiculo() +
-                        "\nE caso você ache que seu problema está relacionado a algum destes infortúnios" +
+        System.out.println("O problema do seu veiculo foi relatado, " +
+                        "E caso você ache que seu problema está relacionado a algum destes infortúnios" +
                         " por favor digite o repectivo número");
         while (prossegui == true){
             exibirMenuProblema();

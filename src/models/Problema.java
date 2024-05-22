@@ -21,14 +21,9 @@ public class Problema {
             System.out.println("Fique Tranquilo, você gostaria de chamar um guincho? (1 = Sim) e (2 = Não)");
             prosseguir = leitorNum.nextInt();
             if (prosseguir == 1){
-                Guincho guincho1 = new Guincho();
-                guincho1.setPlaca("1FH5DF");
-                guincho1.setMarca("CSM");
-                guincho1.setAno_fabricacao("1990");
-                guincho1.acionarGuincho();
                 System.out.println("Aqui estão os detalhes do guincho" +
                         "\n-------------------------------------");
-                System.out.println(guincho1.exibirDetalhes());
+                System.out.println("BOTA O GUINCHO NO MAIN");
                 break;
             } else if (prosseguir == 2) {
                 System.out.println("Retornando ao menu...");
