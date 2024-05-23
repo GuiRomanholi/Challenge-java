@@ -8,7 +8,7 @@ public class Oficina {
 
 
     public String oficinaRecebeuCarro(){
-        return "A oficina " + this.nome + "recebeu o veículo" +
+        return "A oficina " + this.nome + " recebeu o veículo" +
                 "\ne para caso precise aqui está o contato: " + this.contato;
     }
 
