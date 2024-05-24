@@ -97,7 +97,7 @@ public class TesteCarro {
                 endereco.setEstado("São Paulo");
                 endereco.setNumero("223");
 
-                System.out.println(endereco.exibirEndereco());
+                System.out.println(endereco.exibirEndereco() + "\nO seu nome é " + cliente.getNome());
                 break;
             } else if (continuar == 2) {
                 System.out.println("Prosseguindo...");
